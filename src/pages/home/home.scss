@@ -1,0 +1,167 @@
+page-home {
+
+
+
+/*---------------------------MENU DE NAVIGATION---------------------- */
+
+	#headerNav {
+		background-color: #08C5CB;
+		width: 100%;
+		height: 50px;
+		margin: 0px;
+		position: fixed;
+		z-index: 5;
+	}
+	
+	#listeNavigation {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+	
+	#listeNavigation li {
+		list-style-type: none;
+		margin-left: -50px;
+		margin-top: 15px;
+		font-size: 18px;
+	}
+	
+
+	
+	.liensNav {
+		text-decoration: none;
+		color: black;
+	}
+	
+	#topScroll {
+		position: fixed;
+		bottom: 10px;
+		right: 20px;
+		margin: 0;
+		padding: 0;
+		width: 50px;
+		z-index: 4;
+		-webkit-transition : opacity .5s;
+		-moz-transition : opacity .5s;
+		-o-transition : opacity .5s;
+		transition : opacity .5s;
+		opacity: 0;
+	}
+
+/*------------------------------------------SECTION D'ACCUEIL-----------------------------------*/
+
+	#sectionAccueil {
+		position: relative;
+		height: 100%;
+		background-color: #08C5CB;
+		text-align: center;
+		padding-right: 15px;
+		padding-left: 15px;
+		padding-top: 15%;
+	}
+	
+	#sectionAccueil p {
+		margin-top: 25px;
+		padding-top: 0px;
+		font-size: 40px;
+		color: #F9643C;
+		text-shadow: 1px 1px 1px black;
+		font-family: 'Convergence', sans-serif;
+		margin-bottom: 250px;
+	}
+	
+	#voirProjets {
+		font-size: 25px;
+		text-decoration: none;
+		color: white;
+		border: 2px solid white;
+		text-align: center;
+		padding: 10px;
+	}
+
+	#imageAccueil {
+		position: absolute;
+		top: 270px;
+		left: 0;
+	}
+
+
+	/*--------------------------------SECTION DE PROJETS--------------------------------*/
+
+	#sectionProjet {
+		background-color: #EAF2F6;
+		text-align: center;
+		padding-right: 20px;		
+		padding-left: 20px;
+		padding-top: 20px;
+		height: 600px;
+		margin-bottom: 0px;
+	}
+
+	#sectionProjet article {
+		height: 300px;
+		color: #F9643C;
+		padding: 15px;
+		width: 100%;
+	}
+	
+	#sectionProjet h3 {
+		font-family: 'Convergence', sans-serif;
+	}
+
+	#articleProjet1,#articleProjet2,#articleProjet3,#articleProjet4,#articleProjet5,#articleProjet6 {
+		position: absolute;
+	}
+
+	#articleProjet1 {
+		left: 0%;
+		top: 20;
+	}
+
+	#articleProjet2 {
+		left: 0%;
+		top: 950px;
+	}
+
+	#articleProjet3 {
+		left: 100%;
+		top: 20;
+	}
+
+	#articleProjet4 {
+		left: 100%;
+		top: 950px;
+	}
+
+	#articleProjet5 {
+		left: 200%;
+		top: 20;
+	}
+
+	#articleProjet6 {
+		left: 200%;
+		top: 950px;
+	}
+	
+	.flecheSlider {
+		position: absolute;
+		top: 670px;
+		z-index: 3;
+	}
+
+	#flecheGauche {
+		left: 5%;
+	}
+
+	#flecheDroite {
+		right: 5%;
+	}
+	
+	
+	
+	
+
+
+}
