@@ -28,9 +28,11 @@ page-home {
 		margin-top: 15px;
 		font-size: 18px;
 	}
-	
 
-	
+	.translator {
+		margin-top: -5px;
+	}
+
 	.liensNav {
 		text-decoration: none;
 		color: black;
@@ -207,10 +209,11 @@ page-home {
 /*-------------------------------------SECTION CONTACT-------------------------------------*/
 
 	#sectionContact {
-		height: 450px;
+		height: 470px;
 		background-color: #4C4C4C;
 		font-size: 14px;
 		color: white;
+		position: relative;
 	}
 
 	#articleForm {		
@@ -219,22 +222,27 @@ page-home {
 		padding-right: 15px;	
 	}
 	
+
+
 	#email {
 		width: 65%;
-		margin-left: 29px;
 		background-color: #E9E9E8;
 		border: 1px solid #08C5CB;
 		color: black;
+		position: absolute;
+		left: 31%;
+		top: 4.5%;
 	}
 	
 	#sujet {
 		width: 65%;
-		margin-left: 72px;
-		margin-top: 5px;
 		margin-bottom: 15px;
 		background-color: #E9E9E8;
 		border: 1px solid #08C5CB;
 		color: black;
+		position: absolute;
+		left: 31%;
+		top: 12%;
 	}
 	
 	#message {
@@ -271,27 +279,33 @@ page-home {
 	}
 
 	#spanNom {
-		margin-left: 45px;
+		position: absolute;
+		left: 45%;
 	}
 
 	#spanPrenom {
-		margin-left: 24px;
+		position: absolute;
+		left: 45%;
 	}
 
 	#spanEmail {
-		margin-left: 40px;
+		position: absolute;
+		left: 45%;
 	}
 
 	#spanTel {
-		margin-left: 58px;
+		position: absolute;
+		left: 45%;
 	}
 
 	#spanAdresse {
-		margin-left: 20px;
+		position: absolute;
+		left: 45%;
 	}
 
 	#spanAdresse2 {
-		margin-left: 92px;
+		position: absolute;
+		left: 45%;
 	}
 
 	footer {

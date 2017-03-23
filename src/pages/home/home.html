@@ -6,12 +6,14 @@
 <header id="headerNav">
 		<nav>
 			<ul id="listeNavigation">
-   				<li id="lienAccueil" (click)="scrollElement1()" class="liensNav"><a class="liensNav" href="#">Accueil</a></li><!--Liste
+   				<li id="lienAccueil" (click)="scrollElement1()" class="liensNav"><a class="liensNav" href="#">Home</a></li><!--Liste
    				denavigation-->
-				<li id="lienProjets" (click)="scrollElement()" class="liensNav"><a class="liensNav" href="#">Projets</a></li>
-				<li id="lienParcour" (click)="scrollElement2()" class="liensNav"><a class="liensNav" href="#">Parcour</a></li>
+				<li id="lienProjets" (click)="scrollElement()" class="liensNav"><a class="liensNav" href="#">Work</a></li>
+				<li id="lienParcour" (click)="scrollElement2()" class="liensNav"><a class="liensNav" href="#">Course</a></li>
 				<li id="lienContact" (click)="scrollElement3()" class="liensNav"><a class="liensNav" href="#">Contact</a></li>
+				<li class="translator"><a href="#" class="translator"><img id="imgTranslate" class="translator" src="images/france.png" width="25"></a></li>
    			</ul>
+   			
 		</nav>
 </header>
 
@@ -19,8 +21,8 @@
 
 <section class="section" id="sectionAccueil">
 
-	<p>Mujkic Alvin<br>-<br>apprenti développeur web</p><br><br>
-	<a id="voirProjets" (click)="scrollElement()" href="#">Voir mes projets</a>
+	<p>Mujkic Alvin<br>-<br><span id="beginner">web developper (beginner)</span></p><br><br>
+	<a id="voirProjets" (click)="scrollElement()" href="#">View my work</a>
 
 	<img id="imageAccueil" src="images/accueil3.png" width="100%">
 </section>
@@ -52,13 +54,13 @@
 
 	<article id="aPropos">
 		<p>
-		Mon nom est Alvin Mujkic et je suis actuellement en formation à ACS ( Access Code School ) à Chalon-sur-Saône. Avant d'intégrer celle-ci, mon parcours n'est pas exceptionnel. Je n'ai jamais été très scolaire, donc, à part le Brevet des Collèges, je n'ai aucun diplôme. J'ai depuis surout effectué de petites missions en intérim qui ne m'apportait pas beaucoup de satisfaction. J'ai alors décider de me lancer la programmation pour les opportunités que ce domaine offre, et aussi car programmer me plaît. Tout d'abord, j'ai codé en ligne sur des sites de e-learning et sur différents forums. Mais ce nétai pas suffisant et il fallait intégrer une formation. Après plusieurs entretiens, j'ai trouvé ma place au sein de ma formation actuelle, ACS. Cette formation prépare au métier de dévelopeur logiciel (développeur web) et délivre un titre professionnel de niveau 3 (équivalent Bac+2).
+		My name is Alvin Mujkic et I'm curently in ACS (Access Code School) in Chalon-Sur-Saône. Before getting in this school, my general course is not fantastic. I never really liked the traditional school, so except the Certificate of General Education, I don't have any diplomas. Generally, I had many jobs, but they all were on short periods and dind't get me any satisfaction. Then I decided to learn programming because of all the opportunities the Web offers us, and mostly because it interest me a lot. I first started to learn coding on the Internet thanks to some e-learning sites et forums. But that wasn't enough and I wanted to find a school where I would be able to learn more efficiently. After a few interviews, I finally found and was accepted in ACS school. This school prepare us to be a junior web developper and provides us a diploma that is equivalent to the tray 2 level of education.
 		</p>
 	</article>
 
 	<article id="articleCompetences">
 		<img src="images/profil_03.png">
-		<ul><h6><strong>Compétences</strong></h6>
+		<ul><h6><strong>My Skills</strong></h6>
 			<li>HTML5/CSS3</li>
 			<li>JavaScript/jQuery</li>
 			<li>PHP/SQL</li>
@@ -76,22 +78,22 @@
 
 	<article id="articleForm">
 		<form autocomplete="off">
-			<label for="email">Votre e-mail : </label><input type="text" name="email" id="email" class="inputContact"><br>
-			<label for="sujet">Sujet : </label><input type="text" name="sujet" id="sujet" class="inputContact"><br>
-			<label for="message">Message : </label><textarea name="message" id="message" placeholder="Ecrivez votre message ici...." class="inputContact" rows="7"></textarea><br>
-			<input type="submit" id="submit" name="submit" value="Ecrivez moi">
+			<label id="labelEmail" for="email">Your e-mail : </label><br><input type="text" name="email" id="email" class="inputContact"><br>
+			<label id="labelSujet" for="sujet" style="margin-top: 10px;">Subject : </label><br><input type="text" name="sujet" id="sujet" class="inputContact"><br>
+			<label for="message">Message : </label><textarea name="message" id="message" placeholder="Write your message here...." class="inputContact" rows="7"></textarea><br>
+			<input type="submit" id="submit" name="submit" value="Send">
 		</form>
 	</article>
 
 	<article id="articleInfo">
-		<h5 style="text-align: center; color: #E76E33">Informations complémentaires</h5>
+		<h5 style="text-align: center; color: #E76E33">Further informations</h5>
 
 		<ul>
-			<li>Nom :      <span id="spanNom">Mujkic</span></li>
-			<li>Prénom :   <span id="spanPrenom">Alvin</span></li>
-			<li>Email :    <span id="spanEmail">alvin.m@codeur.online</span></li>
-			<li>Tél :      <span id="spanTel">07 86 65 78 33</span></li>
-			<li>Adresse :  <span id="spanAdresse">1b, Place De La Mairie</span><br><span id="spanAdresse2">71310, Mervans</span></li>
+			<li><span id="idNom">Surname :</span>   <span id="spanNom">Mujkic</span></li>
+			<li><span id="idPrenom">Name :  </span>	<span id="spanPrenom">Alvin</span></li>
+			<li>Email : 	<span id="spanEmail">alvin.m@codeur.online</span></li>
+			<li><span id="idTel">Tel :  </span> 	<span id="spanTel">07 86 65 78 33</span></li>
+			<li><span id="idAdresse">Adress :</span>	<span id="spanAdresse">1b, Place De La Mairie</span><br><span id="spanAdresse2">71310, Mervans</span></li>
 		</ul>
 
 	</article>
