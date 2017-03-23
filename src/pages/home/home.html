@@ -6,22 +6,21 @@
 <header id="headerNav">
 		<nav>
 			<ul id="listeNavigation">
-   				<li id="lienAccueil" class="liensNav"><a class="liensNav" href="#">Accueil</a></li><!--Liste
+   				<li id="lienAccueil" (click)="scrollElement1()" class="liensNav"><a class="liensNav" href="#">Accueil</a></li><!--Liste
    				denavigation-->
-				<li id="lienProjets" class="liensNav"><a class="liensNav" href="#">Projets</a></li>
-				<li id="lienProfil" class="liensNav"><a class="liensNav" href="#">Profil</a></li>
+				<li id="lienProjets" (click)="scrollElement()" class="liensNav"><a class="liensNav" href="#">Projets</a></li>
+				<li id="lienParcour" (click)="scrollElement2()" class="liensNav"><a class="liensNav" href="#">Parcour</a></li>
+				<li id="lienContact" (click)="scrollElement3()" class="liensNav"><a class="liensNav" href="#">Contact</a></li>
    			</ul>
 		</nav>
 </header>
-
- 	<a href='#'><img id="topScroll" src="images/flecheScroll.png"></a> <!--Fleche retour en haut de page-->
 
 <!------------------------------------------SECTION D'ACCUEIL-------------------------------------------->
 
 <section class="section" id="sectionAccueil">
 
 	<p>Mujkic Alvin<br>-<br>apprenti développeur web</p><br><br>
-	<a id="voirProjets" href="#">Voir mes projets</a>
+	<a id="voirProjets" (click)="scrollElement()" href="#">Voir mes projets</a>
 
 	<img id="imageAccueil" src="images/accueil3.png" width="100%">
 </section>
@@ -34,84 +33,74 @@
 		<a href="#" id="flecheDroite" class="flecheSlider"><img src="images/flecheDroite.png"/></a>
 
 	
-		
-		<article class="articlesProjet premierePaire" id="articleProjet1">
-			<header>
-				<a href="https://github.com/Allviinn/travelFile" target="_blank">
-				<img src="images/travelFile.png" height="120"></a>
-			</header>
-
-			<h4>WeTransfer-like</h4>
-			<p>À la rentrée 2017, on entame notre première semaine de PHP avec une bataille navale. Exercice très pratique pour nous fair boucler dans des tableaux.</p>
-		</article>
-
-<!------------------------>
-
-		<article class="articlesProjet premierePaire" id="articleProjet2">
-
-			<header>
-				<a href="https://github.com/Allviinn/Blog-PHP-Alvin" target="_blank">
-				<img src="images/blog.png" height="120"></a>
-			</header>
-
-				<h4>Blog</h4>
-				<p>Deuxième semaine de PHP. Au tour du Blog, exercice plus concret, qui nous fait faire une table de jointure. Concept non-vu jusqu'ici.</p>
-			
-		</article>
-
-<!---------------------->
-		
-		<article class="articlesProjet deuxiemePaire" id="articleProjet3">
-			<header>
-				<a href="https://github.com/Allviinn/Explorateur" target="_blank">
-				<img src="images/explorateur_fichiers.png" height="120"></a>
-			</header>
-				<h4>Explorateur de fichiers</h4>
-				<p>Troisième semaine PHP, on commence à explorer nos fichiers. Exercice idéal pour s'entraîner auxchemins reels et URL.</p>
-			
-		</article>
-				
-<!---------------------->
-		
-		<article   class="articlesProjet deuxiemePaire" id="articleProjet4">
-			<header>
-				<a href="https://github.com/Allviinn/Bombermann" target="_blank">
-				<img src="images/bomberman.png" height="120"></a>
-			</header>
-				<h4>Bomberman</h4>
-				<p>Tout les exercices de JavaScript sont terminés. On consolide tout ça avec un projet finaleffectué en groupe. Le bomberman-like.</p>
-			
-		</article>
-
-<!------------------------>
-						
-			<article class="articlesProjet troisiemePaire" id="articleProjet5">
+		<div *ngFor="let post of posts; let i = index">
+			<article class="articlesProjet" id="articleProjet{{ i + 1 }}">
 				<header>
-					<a href="https://github.com/Allviinn/Panier-PHP" target="_blank">
-					<img src="images/panier.png" height="120"></a>
+					<a href="{{post.lienGit}}" target="_blank">
+					<img src="http://mujkic.chalon.codeur.online/api/{{post.image}}" height="140"></a>
 				</header>
-			
-				<h4>Panier en PHP</h4>
-				<p>Avec le développement des mobiles, le responsive design est incontournable. Rien de tel queBootstrap ( conçu pour le "mobile first") pour s'acquiter de cette tâche.</p>
+	
+				<h4 [innerHTML]="post.titre"></h4>
+				<i [innerHTML]="post.realisation"><br></i>
+				<p [innerHTML]="post.descriptif"></p>
 			</article>
-				
-<!---------------------->
+		</div>
+
+	</section>
+
+<section id="sectionParcour">
+
+	<article id="aPropos">
+		<p>
+		Mon nom est Alvin Mujkic et je suis actuellement en formation à ACS ( Access Code School ) à Chalon-sur-Saône. Avant d'intégrer celle-ci, mon parcours n'est pas exceptionnel. Je n'ai jamais été très scolaire, donc, à part le Brevet des Collèges, je n'ai aucun diplôme. J'ai depuis surout effectué de petites missions en intérim qui ne m'apportait pas beaucoup de satisfaction. J'ai alors décider de me lancer la programmation pour les opportunités que ce domaine offre, et aussi car programmer me plaît. Tout d'abord, j'ai codé en ligne sur des sites de e-learning et sur différents forums. Mais ce nétai pas suffisant et il fallait intégrer une formation. Après plusieurs entretiens, j'ai trouvé ma place au sein de ma formation actuelle, ACS. Cette formation prépare au métier de dévelopeur logiciel (développeur web) et délivre un titre professionnel de niveau 3 (équivalent Bac+2).
+		</p>
+	</article>
+
+	<article id="articleCompetences">
+		<img src="images/profil_03.png">
+		<ul><h6><strong>Compétences</strong></h6>
+			<li>HTML5/CSS3</li>
+			<li>JavaScript/jQuery</li>
+			<li>PHP/SQL</li>
+			<li>Ajax</li>
+			<li>Laravel</li>
+			<li>Angular2</li>
+			<li>Ionic 2</li>
+		</ul>
 		
-			<article  class="articlesProjet troisiemePaire" id="articleProjet6">
-				<header>
-					<a href="https://github.com/Allviinn/Slider-jQuery" target="_blank">
-					<img src="images/slider.png" height="120"></a>
-				</header>
-				<h4>Slider 16 décembre 2016</h4>
-				<p>Faîtes défiler les images grâce à du pur JavaScript. Découverte des "set interval", qui ne sontpas des plus facile à manipuler.</p>
-			</article>
-			
-		</section>
+	</article>
 
+</section>
 
+<section id="sectionContact">
 
+	<article id="articleForm">
+		<form autocomplete="off">
+			<label for="email">Votre e-mail : </label><input type="text" name="email" id="email" class="inputContact"><br>
+			<label for="sujet">Sujet : </label><input type="text" name="sujet" id="sujet" class="inputContact"><br>
+			<label for="message">Message : </label><textarea name="message" id="message" placeholder="Ecrivez votre message ici...." class="inputContact" rows="7"></textarea><br>
+			<input type="submit" id="submit" name="submit" value="Ecrivez moi">
+		</form>
+	</article>
 
+	<article id="articleInfo">
+		<h5 style="text-align: center; color: #E76E33">Informations complémentaires</h5>
 
+		<ul>
+			<li>Nom :      <span id="spanNom">Mujkic</span></li>
+			<li>Prénom :   <span id="spanPrenom">Alvin</span></li>
+			<li>Email :    <span id="spanEmail">alvin.m@codeur.online</span></li>
+			<li>Tél :      <span id="spanTel">07 86 65 78 33</span></li>
+			<li>Adresse :  <span id="spanAdresse">1b, Place De La Mairie</span><br><span id="spanAdresse2">71310, Mervans</span></li>
+		</ul>
 
+	</article>
+</section>
+
+<footer>
+	<a href="https://github.com/Allviinn" target="_blank"><img src="images/github.png" width="40"></a>
+	<a href="https://facebook.com" target="_blank"><img src="images/facebook.png" width="40"></a>
+	<a href="https://www.linkedin.com/in/alvin-morel-581844131/" target="_blank"><img src="images/linkedin.png" width="40"></a>
+</footer>
 
 </ion-content>

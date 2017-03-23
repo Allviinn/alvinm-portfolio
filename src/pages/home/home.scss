@@ -19,6 +19,7 @@ page-home {
 		justify-content: space-around;
 		margin-top: 0px;
 		padding-top: 0px;
+		font-size: 10px;
 	}
 	
 	#listeNavigation li {
@@ -65,7 +66,7 @@ page-home {
 	#sectionAccueil p {
 		margin-top: 25px;
 		padding-top: 0px;
-		font-size: 40px;
+		font-size: 30px;
 		color: #F9643C;
 		text-shadow: 1px 1px 1px black;
 		font-family: 'Convergence', sans-serif;
@@ -93,11 +94,14 @@ page-home {
 	#sectionProjet {
 		background-color: #EAF2F6;
 		text-align: center;
-		padding-right: 20px;		
-		padding-left: 20px;
 		padding-top: 20px;
-		height: 600px;
+		height: 400px;
 		margin-bottom: 0px;
+		position: relative;
+	}
+
+	#sectionProjet div {
+		text-align: center;
 	}
 
 	#sectionProjet article {
@@ -105,49 +109,52 @@ page-home {
 		color: #F9643C;
 		padding: 15px;
 		width: 100%;
+		text-align: center;
+		transition: opacity 0.4s;
 	}
 	
-	#sectionProjet h3 {
+	#sectionProjet h4 {
 		font-family: 'Convergence', sans-serif;
+		font-size: 16px;
 	}
 
-	#articleProjet1,#articleProjet2,#articleProjet3,#articleProjet4,#articleProjet5,#articleProjet6 {
+	.articlesProjet {
 		position: absolute;
+		top: 40px;
+		background-color: #EAF2F6;
+	}
+
+	#sectionProjet i {
+		font-size: 13px;
 	}
 
 	#articleProjet1 {
-		left: 0%;
-		top: 20;
+		opacity: 0;
 	}
 
 	#articleProjet2 {
-		left: 0%;
-		top: 950px;
+		opacity: 0;
 	}
 
 	#articleProjet3 {
-		left: 100%;
-		top: 20;
+		opacity: 0;
 	}
 
 	#articleProjet4 {
-		left: 100%;
-		top: 950px;
+		opacity: 0;
 	}
 
 	#articleProjet5 {
-		left: 200%;
-		top: 20;
+		opacity: 0;
 	}
 
 	#articleProjet6 {
-		left: 200%;
-		top: 950px;
+		opacity: 1;
 	}
 	
 	.flecheSlider {
 		position: absolute;
-		top: 670px;
+		top: 150px;
 		z-index: 3;
 	}
 
@@ -159,9 +166,142 @@ page-home {
 		right: 5%;
 	}
 	
+	/*--------------------------SECTION PROFIL--------------------------------------*/
+	#sectionParcour {
+		background-color: #E76E33;
+		color: black;
+		padding-top: 20px;
+		padding-left: 18px;
+		padding-right: 18px;
+		font-size: 14px;
+		height: 600px;
+	}
 	
-	
-	
+	#aPropos {
+		text-align: justify;
+	}
 
+	#articleCompetences {
+		display: flex;
+		height: 185px;
+	}
+	
+	#articleCompetences ul {
+		list-style-type: none;
+		font-size: 14px;
+		width: 50%;
+		text-align: center;
+		margin-top: 30px;
+	}
 
+	#articleCompetences img {
+		width: 40%;
+		margin-left: 25px;
+		margin-top: 30px;
+		border: 1px solid black;
+	}
+	
+	#articleCompetences h6 {
+		font-family: 'Convergence', sans-serif;
+	}
+/*-------------------------------------SECTION CONTACT-------------------------------------*/
+
+	#sectionContact {
+		height: 525px;
+		background-color: #4C4C4C;
+		font-size: 14px;
+		color: white;
+	}
+
+	#articleForm {		
+		padding-top: 25px;
+		padding-left: 15px;
+		padding-right: 15px;	
+	}
+	
+	#email {
+		width: 65%;
+		margin-left: 29px;
+		background-color: #E9E9E8;
+		border: 1px solid #08C5CB;
+		color: black;
+	}
+	
+	#sujet {
+		width: 65%;
+		margin-left: 72px;
+		margin-top: 5px;
+		margin-bottom: 15px;
+		background-color: #E9E9E8;
+		border: 1px solid #08C5CB;
+		color: black;
+	}
+	
+	#message {
+		width: 100%;
+		margin-top: 3px;
+		background-color: #E9E9E8;
+		border: 1px solid #08C5CB;
+		color: black;
+	}
+	
+	#submit {
+		width: 30%;
+		margin-left: 70%;
+		margin-bottom: 15px;
+		background-color: #E9E9E8;
+		border: 1px solid #08C5CB;
+		height: 25px;
+		color: black;
+
+	}
+
+	#articleInfo {
+		margin-top: 25px;
+	}
+
+	#articleInfo ul {
+		list-style-type: none;
+		font-size: 16px;
+		margin-left: 20px;
+	}
+
+	#articleInfo ul li {
+		margin-top: 5px;
+	}
+
+	#spanNom {
+		margin-left: 45px;
+	}
+
+	#spanPrenom {
+		margin-left: 24px;
+	}
+
+	#spanEmail {
+		margin-left: 40px;
+	}
+
+	#spanTel {
+		margin-left: 58px;
+	}
+
+	#spanAdresse {
+		margin-left: 20px;
+	}
+
+	#spanAdresse2 {
+		margin-left: 92px;
+	}
+
+	footer {
+		height: 75px;
+		background-color: #242424;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	footer img {
+		margin-top: 15px;
+	}
 }
