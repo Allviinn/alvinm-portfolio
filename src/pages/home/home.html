@@ -29,24 +29,22 @@
 <!------------------------------------------------SECTION PROJETS-------------------------------------->
 
 	<section class="section" id="sectionProjet">
-
-		<a href="#" id="flecheGauche" class="flecheSlider"><img src="images/flecheGauche.png"/></a>
-		<a href="#" id="flecheDroite" class="flecheSlider"><img src="images/flecheDroite.png"/></a>
-
-	
-		<div *ngFor="let post of posts; let i = index">
-			<article class="articlesProjet" id="articleProjet{{ i + 1 }}">
-				<header>
-					<a href="{{post.lienGit}}" target="_blank">
-					<img src="http://mujkic.chalon.codeur.online/api/{{post.image}}" height="140"></a>
-				</header>
-	
-				<h4 [innerHTML]="post.titre"></h4>
-				<i [innerHTML]="post.realisation"><br></i>
-				<p [innerHTML]="post.descriptif"></p>
-			</article>
-		</div>
-
+		<ion-slides pager>
+			
+				<ion-slide *ngFor="let post of posts">
+					<article class="articlesProjet">
+						<header>
+							<a href="{{post.lienGit}}" target="_blank">
+							<img src="http://mujkic.chalon.codeur.online/api/images/{{post.image}}" height="140"></a>
+						</header>
+			
+						<h4>{{ post.titreAnglais }}</h4>
+						<i>{{ post.realisation }}<br></i>
+						<p>{{ post.descrAnglais }}</p>
+					</article>
+				</ion-slide>
+			
+		</ion-slides>
 	</section>
 
 <section id="sectionParcour">

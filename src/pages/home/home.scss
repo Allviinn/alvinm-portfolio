@@ -92,7 +92,7 @@ page-home {
 	#sectionProjet {
 		background-color: #EAF2F6;
 		text-align: center;
-		padding-top: 20px;
+		padding-top: 0px;
 		height: 400px;
 		margin-bottom: 0px;
 		position: relative;
@@ -117,16 +117,25 @@ page-home {
 	}
 
 	.articlesProjet {
-		position: absolute;
+		/*position: absolute;*/
 		top: 40px;
 		background-color: #EAF2F6;
+	}
+
+	.articlesProjet img {
+		width: 140px;
 	}
 
 	#sectionProjet i {
 		font-size: 13px;
 	}
 
-	#articleProjet1 {
+	.articlesProjet p {
+		font-size: 15px;
+	}
+
+
+	/*#articleProjet1 {
 		opacity: 0;
 	}
 
@@ -148,21 +157,8 @@ page-home {
 
 	#articleProjet6 {
 		opacity: 1;
-	}
-	
-	.flecheSlider {
-		position: absolute;
-		top: 150px;
-		z-index: 3;
-	}
+	}*/
 
-	#flecheGauche {
-		left: 5%;
-	}
-
-	#flecheDroite {
-		right: 5%;
-	}
 	
 	/*--------------------------SECTION PARCOUR--------------------------------------*/
 	#sectionParcour {
