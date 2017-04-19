@@ -31,16 +31,16 @@
 	<section class="section" id="sectionProjet">
 		<ion-slides pager>
 			
-				<ion-slide *ngFor="let post of posts">
+				<ion-slide *ngFor="let post of posts; let i = index">
 					<article class="articlesProjet">
 						<header>
 							<a href="{{post.lienGit}}" target="_blank">
 							<img src="http://mujkic.chalon.codeur.online/api/images/{{post.image}}" height="140"></a>
 						</header>
 			
-						<h4>{{ post.titreAnglais }}</h4>
+						<h4 id="projetH4{{ i }}">{{ post.titreAnglais }}</h4>
 						<i>{{ post.realisation }}<br></i>
-						<p>{{ post.descrAnglais }}</p>
+						<p id="projetP{{ i }}">{{ post.descrAnglais }}</p>
 					</article>
 				</ion-slide>
 			
@@ -78,7 +78,9 @@
 			<label id="labelEmail" for="email">Your e-mail : </label><br><input type="text" name="email" id="email" class="inputContact"><br>
 			<label id="labelSujet" for="sujet" style="margin-top: 10px;">Subject : </label><br><input type="text" name="sujet" id="sujet" class="inputContact"><br>
 			<label for="message">Message : </label><textarea name="message" id="message" placeholder="Write your message here...." class="inputContact" rows="7"></textarea><br>
-			<input type="submit" id="submit" name="submit" value="Send">
+			<div id="englobage"><div id="msgAjax"></div>
+			<input type="submit" id="submit" name="submit" value="Send"></div>
+
 		</form>
 	</article>
 

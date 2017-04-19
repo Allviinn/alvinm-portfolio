@@ -29,74 +29,7 @@ export class HomePage
 		var posts = this.posts;
     	console.log(posts[0].titre);
 		//---------------------------SLIDER----------------------------------
-    	$( document ).ready(function(){
-	
-			//$("#flecheDroite").click(function(){
-			//	if ($("#articleProjet6").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet6").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet5").css({"opacity": "1", "display" : "block"}); 
-//
-			//	} else if ($("#articleProjet5").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet5").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet4").css({"opacity": "1", "display" : "block"});
-//
-			//	} else if ($("#articleProjet4").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet4").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet3").css({"opacity": "1", "display" : "block"}); 
-//
-			//	} else if ($("#articleProjet3").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet3").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet2").css({"opacity": "1", "display" : "block"}); 
-//
-			//	} else if ($("#articleProjet2").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet2").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet1").css({"opacity": "1", "display" : "block"}); 
-//
-			//	} else if ($("#articleProjet1").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet1").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet6").css({"opacity": "1", "display" : "block"}); 
-			//	}
-			//	
-			//}); 
-	//
-			//$("#flecheGauche").click(function(){
-	 		//	if ($("#articleProjet6").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet6").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet1").css({"opacity": "1", "display" : "block"}); 
-//
-			//	} else if ($("#articleProjet1").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet1").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet2").css({"opacity": "1", "display" : "block"});
-//
-			//	} else if ($("#articleProjet2").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet2").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet3").css({"opacity": "1", "display" : "block"}); 
-//
-			//	} else if ($("#articleProjet3").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet3").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet4").css({"opacity": "1", "display" : "block"}); 
-//
-			//	} else if ($("#articleProjet4").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet4").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet5").css({"opacity": "1", "display" : "block"}); 
-//
-			//	} else if ($("#articleProjet5").css("opacity") == "1") 
-			//	{
-			//		$("#articleProjet5").css({"opacity": "0", "display" : "none"});
-			//		$("#articleProjet6").css({"opacity": "1", "display" : "block"}); 
-			//	}
-			//}); 
+    	$( document ).ready(function(){ 
 
 			$('#lienAccueil a').css({"color": "#F9643C"});
     		window.addEventListener("scroll", function() {
@@ -146,19 +79,11 @@ export class HomePage
 					$('#idPrenom').text('Prénom :');
 					$('#idTel').text('Tél :');
 					$('#idAdresse').text('Adresse :');
-					$('#articleProjet1 h4').html(posts[0].titre);
-					$('#articleProjet2 h4').html(posts[1].titre);
-					$('#articleProjet3 h4').html(posts[2].titre);
-					$('#articleProjet4 h4').html(posts[3].titre);
-					$('#articleProjet5 h4').html(posts[4].titre);
-					$('#articleProjet6 h4').html(posts[5].titre);
-					$('#articleProjet1 p').html(posts[0].descriptif);
-					$('#articleProjet2 p').html(posts[1].descriptif);
-					$('#articleProjet3 p').html(posts[2].descriptif);
-					$('#articleProjet4 p').html(posts[3].descriptif);
-					$('#articleProjet5 p').html(posts[4].descriptif);
-					$('#articleProjet6 p').html(posts[5].descriptif);
-					
+					var count = $('.articlesProjet').length;
+					for (var i = 0; i < count; i++) {
+						$('#projetH4' + i).html(posts[i].titre);
+						$('#projetP' + i).html(posts[i].descriptif);
+					}
 
 				}
 
@@ -180,20 +105,43 @@ export class HomePage
 					$('#idPrenom').text('Name :');
 					$('#idTel').text('Tel :');
 					$('#idAdresse').text('Adress :');
-					$('#articleProjet1 h4').html(posts[0].titreAnglais);
-					$('#articleProjet2 h4').html(posts[1].titreAnglais);
-					$('#articleProjet3 h4').html(posts[2].titreAnglais);
-					$('#articleProjet4 h4').html(posts[3].titreAnglais);
-					$('#articleProjet5 h4').html(posts[4].titreAnglais);
-					$('#articleProjet6 h4').html(posts[5].titreAnglais);
-					$('#articleProjet1 p').html(posts[0].descrAnglais);
-					$('#articleProjet2 p').html(posts[1].descrAnglais);
-					$('#articleProjet3 p').html(posts[2].descrAnglais);
-					$('#articleProjet4 p').html(posts[3].descrAnglais);
-					$('#articleProjet5 p').html(posts[4].descrAnglais);
-					$('#articleProjet6 p').html(posts[5].descrAnglais);
-					
+					var count = $('.articlesProjet').length;
+					for (var i = 0; i < count; i++) {
+						$('#projetH4' + i).html(posts[i].titreAnglais);
+						$('#projetP' + i).html(posts[i].descrAnglais);
+					}
 				}
+			});
+
+
+			$('#submit').on('click', function(e) {
+
+				e.preventDefault();
+
+				var mail = $('#email').val();
+				var sujet = $('#sujet').val();
+				var message = $('#message').val();
+
+				var json1={	"email":mail,
+               				"sujet":sujet,
+               				"message": message
+              				};
+
+
+              	$.ajax({
+    	    		type:'POST',
+    	    		url:'http://mujkic.chalon.codeur.online/api/prive.php',
+    	    		crossDomain: true,
+    	   			data: { "dataMail": json1 },
+    	    			success: function(data){
+    	    			    $('#msgAjax').html(data);
+    	    			    $('#msgAjax').css('visibility', 'visible');
+    	    			    $('#email').val('');
+    	    			    $('#sujet').val('');
+    	    			    $('#message').val('');
+    	    			}
+    	   
+    			});
 			});
 
 		});
@@ -219,5 +167,9 @@ export class HomePage
     let element = document.getElementById('sectionContact');
     this.content.scrollTo(0, element.offsetTop-45, 500);
   	}
+
+
+
+
 
 }
